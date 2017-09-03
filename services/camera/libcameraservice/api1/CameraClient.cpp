@@ -25,8 +25,6 @@
 #include "device1/CameraHardwareInterface.h"
 #include "CameraService.h"
 
-typedef unsigned long uint32_t;
-
 namespace android {
 
 #define LOG1(...) ALOGD_IF(gLogLevel >= 1, __VA_ARGS__);
@@ -846,7 +844,7 @@ void CameraClient::dataCallback(int32_t msgType,
 #ifdef MTK_HARDWARE
     if (msgType == 0x80000000) { //MTK_CAMERA_MSG_EXT_DATA
         struct DataHeader {
-            uint32_t        extMsgType;
+            std::uint32_t        extMsgType;
         } dataHeader;
         sp<IMemoryHeap> heap = 0;
         ssize_t         offset = 0;
