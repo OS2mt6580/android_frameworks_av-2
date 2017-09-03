@@ -21,6 +21,8 @@
 #include <gui/Surface.h>
 #include <media/hardware/HardwareAPI.h>
 
+#include <stdint.h>
+
 #include "api1/CameraClient.h"
 #include "device1/CameraHardwareInterface.h"
 #include "CameraService.h"
@@ -495,6 +497,7 @@ void CameraClient::releaseRecordingFrame(const sp<IMemory>& mem) {
 
 void CameraClient::releaseRecordingFrameHandle(native_handle_t *handle) {
     if (handle == nullptr) return;
+
 
 
     sp<IMemory> dataPtr;
