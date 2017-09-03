@@ -21,11 +21,11 @@
 #include <gui/Surface.h>
 #include <media/hardware/HardwareAPI.h>
 
-#include <sys/types.h>
-
 #include "api1/CameraClient.h"
 #include "device1/CameraHardwareInterface.h"
 #include "CameraService.h"
+
+typedef unsigned long uint32_t;
 
 namespace android {
 
