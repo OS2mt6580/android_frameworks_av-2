@@ -21,7 +21,7 @@
 #include <gui/Surface.h>
 #include <media/hardware/HardwareAPI.h>
 
-#include <stdint.h>
+#include <sys/types.h>
 
 #include "api1/CameraClient.h"
 #include "device1/CameraHardwareInterface.h"
